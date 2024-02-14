@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h2>Calculator</h2>
+
+    <form method="POST">{% csrf_token %}
+
+        <label>First_Number:</label><br>
+        <input type="text" name="Fn"><br><br>
+        <label>Second_Number:</label><br>
+        <input type="text" name="Sn"><br><br>
+
+        <select name="opr">
+            <option value="+">Add</option>
+            <option value="-">Subs</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select>
+
+        <button type="submit">Calculate</button><br><br>
+
+        <label>Output:</label>
+        <input type="text" value={{Ans}}>
+
+
+    </form>
+    
+</body>
+</html>
